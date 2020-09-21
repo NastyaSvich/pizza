@@ -1,3 +1,11 @@
-window.onload = function Render() {
-   GetAll()
-}
+(function resultForAll(){
+  // let read = UpdateOne(articul, articul_new, name, description, price, img, category, cal, uglev, belok, zhir)
+  // .then(result => console.log(result));
+  // .then(AddOne(articul_new, name, description, price, img, category, cal, uglev, belok, zhir)
+  // .then(result => console.log(result)));
+  // let read = AddOne(articul_new, name, description, price, img, category, cal, uglev, belok, zhir)
+  // .then(result => console.log(result)).then(GetAll().then(result => console.log(result)));
+
+  let result = GetAll().then(result => pizzaAll(result))
+
+})();
