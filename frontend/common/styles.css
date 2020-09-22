@@ -93,6 +93,8 @@ button { outline: 0; border: 0; background: none; cursor: pointer; }
 
 b.max-bold { font-weight: 700; }
 
+.bold {font-weight: bold;}
+
 input:focus,
 textarea:focus { outline-color: #EF0031; }
 
@@ -165,6 +167,15 @@ textarea:focus { outline-color: #EF0031; }
 }
 .close:after {
   transform: rotate(-45deg);
+}
+
+.disable{
+  pointer-events: none;
+}
+
+h6 .colorBnt{
+  border: 1px solid grey !important;
+  color: grey !important;
 }
 
 /* RESPONSIVE */
@@ -503,7 +514,7 @@ section {
 .heading {
         position: relative;
         text-align: center;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
 }
 
 .heading-img {
@@ -1142,9 +1153,9 @@ color: black !important;
 
 /* BUTTON STYLING */
 
-.btn-brdr-primary { text-align: center; height: 45px; line-height: 43px; border: 1px solid #EF0031; color: #EF0031; border-radius: 2px; }
+.btn-brdr-primary { text-align: center; height: 45px; line-height: 43px; border: 1px solid #EF0031; color: #EF0031 !important; border-radius: 2px; }
 
-.btn-brdr-primary:hover { background: #EF0031; color: #FFFFFF; }
+.btn-brdr-primary:hover { background: #EF0031; color: #FFFFFF !important; cursor: pointer;}
 
 .btn-primaryc { position: relative; text-align: center; height: 55px; line-height: 50px; background: #EF0031; color: #fff; border-radius: 3px; z-index: 1; }
 
