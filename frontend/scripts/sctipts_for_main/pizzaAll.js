@@ -39,7 +39,5 @@ function pizzaAll(result){
   }
   out_arr.innerHTML = str;
 }
-else {
-  check();
-}
+else {check();}
 }
