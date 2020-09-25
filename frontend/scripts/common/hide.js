@@ -14,3 +14,8 @@ function hide(event){
   }
   }
 }
+
+document.onclick = function clickCard(event) {
+  hide(event);
+  basketBtn(event);
+};

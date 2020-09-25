@@ -1,8 +1,3 @@
-document.onclick = function clickCard(event) {
-  hide(event);
-  basketBtn(event);
-};
-
 (function ($) {
         "use strict";
         // DROPDOWN MENU

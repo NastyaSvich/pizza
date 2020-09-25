@@ -243,6 +243,10 @@ h6 .colorBnt{
   padding: 40px 70px 10px !important;
 }
 
+.sect1 {
+  padding: 40px 70px 100px!important;
+}
+
 /* RESPONSIVE */
 
 @media only screen and (max-width: 1200px) {
@@ -334,6 +338,23 @@ sup{color: red; left: 20px; top: -10px;}
   .demo:hover img.first {opacity:1;filter:alpha(opacity=100);}
   .demo:hover img.second, .demo img.second:hover {opacity:0;filter:alpha(opacity=0);}
 
+  .allWid{
+    flex: 20 0 30%;
+  }
+
+  .justify{
+    text-align: justify;
+  }
+
+  .red{
+    color: #EF0031;
+  }
+
+  path {
+    stroke: black;
+    stroke-width: 0.25;
+    fill: red;
+  }
 /* BOTTOM HEADER */
 
 header:after {
@@ -435,6 +456,10 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
 
 @media only screen and (max-width: 1200px) {
 
+  .allWid {
+    flex: none;
+  }
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -469,6 +494,8 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
         header .right-area { color: #fff; }
 
         header sup{display: none;}
+
+        header .basket {display: none;}
 
         /* MAIN MENU */
 
