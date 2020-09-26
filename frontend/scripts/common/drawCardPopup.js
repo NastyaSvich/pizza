@@ -39,3 +39,8 @@ if (result[i]!==undefined) str1 +=
 }
 outArr1.innerHTML = str1;
 }
+
+document.onclick = function clickCard(event) {
+  hide(event);
+  basketBtn(event);
+};

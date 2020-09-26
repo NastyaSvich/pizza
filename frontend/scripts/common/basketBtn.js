@@ -1,4 +1,4 @@
-let arrBasket, name, img, price, btnCheck;
+let arrBasket, name, img, price, priceFirst, btnCheck, counts;
 
 function basketBtn(event) {
   const click = event.target;
@@ -9,7 +9,9 @@ function basketBtn(event) {
     name = [];
     img = [];
     price = [];
+    priceFirst = [];
     btnCheck = [];
+    counts = [];
   }
   else{
     let res = localStorage.getItem('arrBasket');
@@ -17,19 +19,25 @@ function basketBtn(event) {
     name = arrBasket.name;
     img = arrBasket.img;
     price = arrBasket.price;
+    priceFirst = arrBasket.priceFirst;
     btnCheck = arrBasket.btnCheck;
+    counts = arrBasket.counts;
   }
 
     img.push(idPizza.querySelector('.imgForClick').src);
     name.push(idPizza.querySelector('.imgForClick').alt);
     price.push(Number(idPizza.querySelector('.lengthWords b').textContent));
+    priceFirst.push(Number(idPizza.querySelector('.lengthWords b').textContent));
     btnCheck.push(click.dataset.id);
+    counts.push(1);
 
     arrBasket = {
       name: name,
       price: price,
+      priceFirst: priceFirst,
       img: img,
-      btnCheck: btnCheck
+      btnCheck: btnCheck,
+      counts: counts
     }
 
     localStorage.setItem('arrBasket', JSON.stringify(arrBasket));

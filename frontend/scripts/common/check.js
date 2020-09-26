@@ -33,3 +33,9 @@ function checkDrinks(){
   tag.style.display = 'block';
   tag.innerHTML = '<h5 class = "center-text"><b>Напитков не найдено :(</b></h5>';
 }
+
+function checkBasket(){
+  let tag = document.getElementById('basket');
+  tag.style.display = 'block';
+  tag.innerHTML = '<h5 class = "center-text"><b>Ваша корзина пуста :(</b></h5>';
+}

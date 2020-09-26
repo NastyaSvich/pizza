@@ -1,5 +1,3 @@
- // window.onload =
-
 //Получить все записи c БД
 async function GetAll() {
   try {
