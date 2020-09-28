@@ -25,4 +25,9 @@ let arrBasket, name, img, price, priceFirst, btnCheck, counts;
   document.getElementById(`sect${i}`).classList.add('hide');
   sumOrder();
   countBasket();
+  if(Number(localStorage.counter) === 0){
+    document.getElementById("openWindow").classList.add("disable");
+    document.getElementById("openWindow").classList.add("colorBnt");
+    checkBasket();
+  }
 }

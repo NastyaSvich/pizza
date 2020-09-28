@@ -92,3 +92,28 @@ async function AddOne() {
   const data = res.json();
   return data;
 }
+
+//Добавить одну запись в заказы
+async function AddOneOrder(articul_new,name,surname,tel,type,priceAll,price,namePizza,counts) {
+const url = `http://localhost:3000/orders`;
+  const body = {
+    articul: `${articul_new}`,
+    name: `${name}`,
+    surname: `${surname}`,
+    tel: `${tel}`,
+    type: `${type}`,
+    priceAll: `${priceAll}`,
+    price: `${price}`,
+    namePizza: `${namePizza}`,
+    counts: `${counts}`
+  };
+const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  });
+  const data = await res.json();
+  return data;
+}
