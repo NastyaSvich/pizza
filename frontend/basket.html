@@ -6,8 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <link rel="icon" href="images/pizza.svg" />
-        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
         <link href="plugin-frameworks/bootstrap.min.css" rel="stylesheet">
         <link href="fonts/ionicons.css" rel="stylesheet">
         <link href="style/styles.css" rel="stylesheet">
@@ -103,28 +101,28 @@
                   <h3>Оформление заказа</h3>
                   <h4>Мы работаем с 9 до 24, после отправки формы Вам позвонит наш оператор!</h4>
                   <fieldset>
-                    <input placeholder="Ваше имя" id = "name" type="text" pattern="[A-Za-zА-Яа-яЁё\s]+$" tabindex="1" required autofocus>
+                    <input placeholder="Ваше имя" maxlength="15" id = "name" type="text" pattern="[A-Za-zА-Яа-яЁё\s]+$" tabindex="1" required autofocus>
                   </fieldset>
                   <fieldset>
-                    <input placeholder="Ваша фамилия" id = "surname" type="text" pattern="[A-Za-zА-Яа-яЁё\s]+$" tabindex="2" required>
+                    <input placeholder="Ваша фамилия" maxlength="15" id = "surname" type="text" pattern="[A-Za-zА-Яа-яЁё\s]+$" tabindex="2" required>
                   </fieldset>
                   <fieldset>
-                    <input placeholder="Ваш номер телефона" id = "tel" title="&quot;Пример: +375292366362&quot;" type="number" tabindex="3" required>
+                    <input placeholder="Ваш номер телефона" maxlength="12" id = "tel" title="&quot;Пример: +375292366362&quot;" type="number" tabindex="3" required>
                   </fieldset>
                   <fieldset>
                     <h4>Выберите вид доставки! <a href = "03_contacts.html" class = "red" target="_blank">Подробнее о доставке...</a></h4>
                       <div class="form_radio_btn">
-	                       <input id="radio-1" type="radio" name="radio" value="1" checked required>
+	                       <input id="radio-1" type="radio" name="radio" value="Самовывоз" checked required>
 	                       <label for="radio-1">Самовывоз</label>
                       </div>
 
                       <div class="form_radio_btn">
-	                       <input id="radio-2" type="radio" name="radio" value="2">
+	                       <input id="radio-2" type="radio" name="radio" value="Курьер">
 	                       <label for="radio-2">Курьером</label>
                       </div>
 
                       <div class="form_radio_btn">
-	                       <input id="radio-3" type="radio" name="radio" value="3">
+	                       <input id="radio-3" type="radio" name="radio" value="Бесконтактная">
 	                       <label for="radio-3">Бесконтактная</label>
                       </div>
                   </fieldset>

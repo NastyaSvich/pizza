@@ -16,7 +16,7 @@ async function GetAll() {
 }
 
 //Удалить одну запись
-async function DelOne() {
+async function DelOne(articul) {
  const url = `http://localhost:3000/products/delete/?articul=${articul}`;
  const res = await fetch (url, {
    method: 'DELETE',
@@ -42,7 +42,7 @@ async function GetOne(articul) {
 }
 
 //Обновить одну запись
-async function UpdateOne() {
+async function UpdateOne(articul) {
   const url = `http://localhost:3000/products/update?articul=${articul}`;
   const body = {
     articul: `${articul_new}`,
@@ -68,7 +68,7 @@ async function UpdateOne() {
 }
 
 //Добавить одну запись
-async function AddOne() {
+async function AddOne(articul_new, name, description, price, img, category, cal, uglev, belok, zhir) {
   const url = `http://localhost:3000/products`;
   const body = {
     articul: `${articul_new}`,
@@ -103,9 +103,9 @@ const url = `http://localhost:3000/orders`;
     tel: `${tel}`,
     type: `${type}`,
     priceAll: `${priceAll}`,
-    price: `${price}`,
-    namePizza: `${namePizza}`,
-    counts: `${counts}`
+    price: price,
+    namePizza: namePizza,
+    counts: counts
   };
 const res = await fetch(url, {
     method: 'POST',
@@ -116,4 +116,35 @@ const res = await fetch(url, {
   });
   const data = await res.json();
   return data;
+}
+
+
+//Показать все заказы
+async function GetAllOrder() {
+  try {
+  const url = `http://localhost:3000/orders`;
+  const res = await fetch (url, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    }
+    })
+    const data = res.json();
+    return data;
+  }
+  catch (err) { check(); }
+  return data;
+}
+
+//Удалить заказ
+async function DelOneOrder(articul) {
+ const url = `http://localhost:3000/orders/delete/?articul=${articul}`;
+ const res = await fetch (url, {
+   method: 'DELETE',
+   headers: {
+     'Content-Type': 'application/json',
+   }
+   })
+   const data = res.json();
+   return data;
 }

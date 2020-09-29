@@ -14,7 +14,7 @@ var SchemaOrd = new Schema({
 
   tel: { type: String , Required:  'Product category cannot be left blank'},
 
-  type: { type: Number, Required:  'Product category cannot be left blank'},
+  type: { type: String, Required:  'Product category cannot be left blank'},
 
   priceAll: { type: Number, Required:  'Product price cannot be left blank.'},
 
