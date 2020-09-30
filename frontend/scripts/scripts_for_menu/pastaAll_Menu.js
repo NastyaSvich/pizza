@@ -13,6 +13,7 @@ function pastaAll(result) {
         let clas = 'col-lg-3 col-md-4 col-sm-6 card tranform-for-card';
         const { name } = result[i];
         const { price } = result[i];
+        const { img } = result[i];
         const { description } = result[i];
         if (countBasket !== null) {
           for (let j = 0; j < countBasket.btnCheck.length; j += 1) {
@@ -26,7 +27,7 @@ function pastaAll(result) {
           str
   += `<div class='${clas}' id = ${articul}>
        <div class="center-text mb-30">
-           <div class="img-200x mlr-auto pos-relative click"><img data-articul = ${articul} class = "imgForClick" src="images/pasta-2-300x300.png" alt="${name}"></div>
+           <div class="img-200x mlr-auto pos-relative click"><img data-articul = ${articul} class = "imgForClick imgHeight" src=${img} alt="${name}"></div>
            <h5 class="mt-20 lengthWords">${name}</h5>
            <h4 class="mt-5 color-primary lengthWords"><b>${price}</b> <span class = "large">руб.</span></h4>
            <p data-articul = ${articul} class = "descr lengthWords padding-top-15">${description}</p>

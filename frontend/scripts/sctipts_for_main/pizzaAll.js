@@ -17,6 +17,7 @@ function pizzaAll(result){
   let clas = 'col-lg-3 col-md-4 col-sm-6 card tranform-for-card';
   let name = result[i].name;
   let price = result[i].price;
+  let img = result[i].img;
   let description = result[i].description;
   if(countBasket !== null){
   for (let j = 0; j < countBasket.btnCheck.length; j++){
@@ -29,7 +30,7 @@ function pizzaAll(result){
   if (result[i]!==undefined) str +=
   `<div class='${clas}' id = ${articul}>
        <div class="center-text mb-30">
-           <div class="img-200x mlr-auto pos-relative click"><img data-articul = ${articul} class = "imgForClick" src="images/seller-2-200x200.png" alt="${name}"></div>
+           <div class="img-200x mlr-auto pos-relative click"><img data-articul = ${articul} class = "imgForClick imgHeight" src=${img} alt="${name}"></div>
            <h5 class="mt-20 lengthWords">${name}</h5>
            <h4 class="mt-5 lengthWords"><b>${price}</b> <span class = "large">руб.</span></h4>
            <p data-articul = ${articul} class = "descr lengthWords padding-top-15">${description}</p>

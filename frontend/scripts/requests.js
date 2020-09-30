@@ -1,6 +1,5 @@
 //Получить все записи c БД
 async function GetAll() {
-  try {
   const url = `http://localhost:3000/products`;
   const res = await fetch (url, {
     method: 'GET',
@@ -10,9 +9,6 @@ async function GetAll() {
     })
     const data = res.json();
     return data;
-  }
-  catch (err) { check(); }
-  return data;
 }
 
 //Удалить одну запись
@@ -74,13 +70,13 @@ async function AddOne(articul_new, name, description, price, img, category, cal,
     articul: `${articul_new}`,
     name: `${name}`,
     description: `${description}`,
-    price: `${price}`,
+    price: price,
     img: `${img}`,
     category: `${category}`,
-    cal: `${cal}`,
-    uglev: `${uglev}`,
-    belok: `${belok}`,
-    zhir: `${zhir}`
+    cal: cal,
+    uglev: uglev,
+    belok: belok,
+    zhir: zhir
   };
   const res = await fetch (url, {
     method: 'POST',
@@ -121,7 +117,6 @@ const res = await fetch(url, {
 
 //Показать все заказы
 async function GetAllOrder() {
-  try {
   const url = `http://localhost:3000/orders`;
   const res = await fetch (url, {
     method: 'GET',
@@ -131,9 +126,6 @@ async function GetAllOrder() {
     })
     const data = res.json();
     return data;
-  }
-  catch (err) { check(); }
-  return data;
 }
 
 //Удалить заказ

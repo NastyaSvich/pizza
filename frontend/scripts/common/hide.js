@@ -1,6 +1,6 @@
 function hide(event){
   const click = event.target;
-  if (document.querySelector('.b-popup').classList.contains('hide') === true && (click.className === 'imgForClick' || click.classList.contains('descr'))) {
+  if (document.querySelector('.b-popup').classList.contains('hide') === true && (click.classList.contains('imgForClick') === true || click.classList.contains('descr'))) {
     document.querySelector('html').style.overflow = 'hidden';
     document.getElementById('menu').querySelectorAll('.card').forEach(el => document.querySelector('.b-popup').classList.remove('hide'));
     pizzaPopup(event);

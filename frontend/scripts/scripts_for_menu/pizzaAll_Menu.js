@@ -7,6 +7,7 @@ function pizzaAll(result) {
       if (result[i].category === 'Пиццы') {
         count = 1;
         const { articul } = result[i];
+        const { img } = result[i];
         const reslt = localStorage.getItem('arrBasket');
         const countBasket = JSON.parse(reslt);
         let style = `<h6 class="mt-20"><a class="btn-brdr-primary plr-25 basketBtn bold" data-id = ${articul}>В корзину</a></h6>`;
@@ -26,7 +27,7 @@ function pizzaAll(result) {
           str
   += `<div class='${clas}' id = ${articul}>
        <div class="center-text mb-30">
-           <div class="img-200x mlr-auto pos-relative click"><img data-articul = ${articul} class = "imgForClick" src="images/seller-2-200x200.png" alt="${name}"></div>
+           <div class="img-200x mlr-auto pos-relative click"><img data-articul = ${articul} class = "imgForClick imgHeight" src=${img} alt="${name}"></div>
            <h5 class="mt-20 lengthWords">${name}</h5>
            <h4 class="mt-5 color-primary lengthWords"><b>${price}</b> <span class = "large">руб.</span></h4>
            <p data-articul = ${articul} class = "descr lengthWords padding-top-15">${description}</p>

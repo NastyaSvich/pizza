@@ -6,4 +6,4 @@ function deleteOrder(i){
 
 setTimeout(function(){
    window.location.reload(1);
-}, 20000);
+}, 30000);

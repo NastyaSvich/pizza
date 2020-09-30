@@ -1002,6 +1002,18 @@ margin-left: 20px;
 .z-10 { z-index: 10; }
 
 
+.imgHeight{
+  height: 200px;
+}
+
+.imgHeight90{
+  height: 90px;
+}
+
+.imgHeight150{
+  height: 150px;
+}
+
 /* ALIGNMENT */
 
 .float-left {float: left !important;}
@@ -7935,4 +7947,17 @@ border-bottom: 1px solid black;
   .table_blur {
       writing-mode: vertical-rl;
   }
+}
+
+
+/* Admin */
+
+.formAdd select{
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
+
 }

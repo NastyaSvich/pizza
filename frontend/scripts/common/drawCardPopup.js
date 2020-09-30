@@ -17,7 +17,7 @@ if (result[i]!==undefined) str1 +=
 ` <div>
      <div class="center-text" id = ${articul}>
      <div class="colum1">
-         <div class="mlr-auto img-150x pos-relative"><img src="images/seller-2-200x200.png" alt="${name}"></div>
+         <div class="mlr-auto img-150x pos-relative"><img class = "imgHeight150" src=${img} alt="${name}"></div>
          <h3 class="center-text mt-20 lengthWords">${name}</h3>
          <h4 class="center-text mt-5 lengthWords"><b>${price}</b> <span class = "large">руб.</span></h4>
      </div>

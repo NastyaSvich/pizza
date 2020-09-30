@@ -14,7 +14,7 @@ window.onload = function allOrder() {
           str +=
            `  <div class="col-md-6" id = "sect${i}">
               <div class="sided-90x mb-30 margin-l-r">
-                  <div class="s-left"><img class="br-3" src= ${img} alt=${name}></div>
+                  <div class="s-left"><img class="br-3 imgHeight90" src= ${img} alt=${name}></div>
                         <div class="s-right">
                           <h5 class="mb-10 lengthWords"><b>${name}</b><b class = "float-right red">руб.</b><b class="color-primary float-right" id = "ord${i}">${price}</b></h5>
                           <div class="sc-157aem8-0 crBzjJ">
