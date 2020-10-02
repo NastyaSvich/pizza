@@ -25,13 +25,13 @@
             <h5 class = "center-text m-auto mt-50"><b>Выберите что Вы хотите сделать с товаром:</b></h5>
             <h6 class="center-text mt-40 mt-sm-30 mb-20">
                     <a class="btn-brdr-primary plr-25 basketBtn bold" onclick="addProduct()">ДОБАВИТЬ</a>
-                    <a class="btn-brdr-primary plr-25 basketBtn bold">ОБНОВИТЬ</a>
-                    <a class="btn-brdr-primary plr-25 basketBtn bold">УДАЛИТЬ</a>
+                    <a class="btn-brdr-primary plr-25 basketBtn bold" onclick="showProductUpd()">ОБНОВИТЬ</a>
+                    <a class="btn-brdr-primary plr-25 basketBtn bold" onclick="showProduct()">УДАЛИТЬ</a>
             </h6>
           </div>
   </section>
 
-  <section>
+  <section class="mrMin50">
           <div class="container" id = "product"></div>
 
           <div class="b-popup hide" id="ok">
@@ -41,11 +41,29 @@
                   <h6 class = "center-text"><a class="btn-brdr-primary plr-25 basketBtn bold center-text" onclick="location.reload();">ОК</a></h6>
           </div>
           </div>
+
+          <div class="b-popup hide" id="okUpd">
+              <div class="b-popup-content" id="consequence">
+                <h3 class = "center-text mt-50">Товар обновлен!</h3>
+                  <br>
+                  <h6 class = "center-text"><a class="btn-brdr-primary plr-25 basketBtn bold center-text" onclick="location.reload();">ОК</a></h6>
+          </div>
+        </div>
   </section>
 
 <script src="../../scripts/requests.js"></script>
 <script src="addProduct.js"></script>
+<script src="showProduct.js"></script>
+<script src="showProductUpd.js"></script>
+<script src="getProduct.js"></script>
+<script src="getProductForUpd.js"></script>
+<script src="prodOne.js"></script>
+<script src="prodOneUpd.js"></script>
+<script src="addInformation.js"></script>
+<script src="delOne.js"></script>
+<script src="updProduct.js"></script>
 <script src="checkForm.js"></script>
+
 
 </body>
 </html>

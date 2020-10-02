@@ -7947,6 +7947,10 @@ border-bottom: 1px solid black;
   .table_blur {
       writing-mode: vertical-rl;
   }
+
+  div#container {
+    width: 100% !important;
+}
 }
 
 
@@ -7960,4 +7964,98 @@ border-bottom: 1px solid black;
     padding: 10px;
     font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
 
+}
+
+
+
+div#container {
+    display: table;
+    border: solid black 1px;
+    width: 60%;
+    margin: -70px auto;
+}
+
+div#container div.cell {
+  display: table-cell;
+}
+
+div#container div.cell:last-child {
+  width: 1px;
+}
+
+.button:hover{
+  cursor: pointer;
+  color: black !important;
+}
+
+input[type=search] {
+  margin: 0;
+  width: 98%;
+  height: 30px;
+  padding: 0 2%;
+  border: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+}
+
+.button {
+  line-height: 35px;
+  margin: 0;
+  margin-right: -1px;
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background:red;
+  outline: none;
+}
+
+
+/* Ripple magic */
+.button{
+  position: relative;
+  overflow: hidden;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+.button:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+#str1{
+  text-align: center;
+  color: red;
+}
+
+.mrMin50{
+  margin-top: -50px;
 }

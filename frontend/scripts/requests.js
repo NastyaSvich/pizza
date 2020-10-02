@@ -38,19 +38,19 @@ async function GetOne(articul) {
 }
 
 //Обновить одну запись
-async function UpdateOne(articul) {
+async function UpdateOne(articul,articul_new, name, description, price, img, category, cal, uglev, belok, zhir) {
   const url = `http://localhost:3000/products/update?articul=${articul}`;
   const body = {
     articul: `${articul_new}`,
     name: `${name}`,
     description: `${description}`,
-    price: `${price}`,
+    price: price,
     img: `${img}`,
     category: `${category}`,
-    cal: `${cal}`,
-    uglev: `${uglev}`,
-    belok: `${belok}`,
-    zhir: `${zhir}`
+    cal: cal,
+    uglev: uglev,
+    belok: belok,
+    zhir: zhir
   };
   const res = await fetch (url, {
     method: 'PUT',
@@ -60,6 +60,7 @@ async function UpdateOne(articul) {
     body: JSON.stringify(body),
   });
   const data = res.json();
+  console.log(data);
   return data;
 }
 

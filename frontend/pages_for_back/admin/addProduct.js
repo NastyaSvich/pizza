@@ -12,7 +12,7 @@ function addProduct() {
               <input placeholder="Название" maxlength="10" id = "name" type="text" tabindex="2" required>
             </fieldset>
             <fieldset>
-              <input placeholder="Описание" maxlength="30" id = "descript" type="text" tabindex="3" required>
+              <input placeholder="Описание" maxlength="50" id = "descript" type="text" tabindex="3" required>
             </fieldset>
             <fieldset>
               <input placeholder="Цена" maxlength="10" id = "price" type="number" tabindex="4" required>
@@ -44,7 +44,7 @@ function addProduct() {
               <input placeholder="Жиры" maxlength="5" id = "zhir" type="number" tabindex="9" required>
             </fieldset>
             <fieldset>
-              <button name="submit" type="submit" id="submit" onclick = "checkForm();">Submit</button>
+              <button name="submit" type="submit" id="submit" onclick = "checkForm();">Отправить</button>
             </fieldset>
           </form> `;
 
