@@ -31,7 +31,7 @@ function prodOneUpd(result){
                   <input placeholder="Цена" maxlength="10" id = "price" type="number" tabindex="4" required>
                 </fieldset>
                 <fieldset>
-                  <input placeholder="Ссылка на картинку" title="Пример: https://ibb.co/2kB0StS" type="text" id = "img" tabindex="5" required>
+                  <input placeholder="Ссылка на картинку(png)" title="Пример: https://ibb.co/2kB0StS" type="text" id = "img" tabindex="5" required>
                 </fieldset>
                 <fieldset>
                   <h4>Выберите категорию продукта!</h4>
