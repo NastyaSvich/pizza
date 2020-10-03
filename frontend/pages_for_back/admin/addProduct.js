@@ -1,7 +1,7 @@
 function addProduct() {
   const outArr = document.getElementById('product');
-  let str = ``;
-          str
+  let str = '';
+  str
           += `
           <form id="contact" action="" method="post" onsubmit="return false;" class = "formAdd">
             <h3 class = "center-text">Добавление товара</h3>
@@ -48,5 +48,5 @@ function addProduct() {
             </fieldset>
           </form> `;
 
-    outArr.innerHTML = str;
+  outArr.innerHTML = str;
 }

@@ -1,14 +1,13 @@
-function prodOne(result){
-  if (result.length === 0) { document.getElementById('result').innerHTML = '<div id="str1" class = "black">Такого товара нет!</div>'; }
-  else{
+function prodOne(result) {
+  if (result.length === 0) { document.getElementById('result').innerHTML = '<div id="str1" class = "black">Такого товара нет!</div>'; } else {
     const outArr = document.getElementById('product');
-    let str = ``;
-    let name = result[0].name;
-    let img = result[0].img;
-    let price = result[0].price;
-    let art = result[0].articul;
+    let str = '';
+    const { name } = result[0];
+    const { img } = result[0];
+    const { price } = result[0];
+    const art = result[0].articul;
 
-            str
+    str
             += `<div class="col-md-6 m-auto" id = "articul" data-id = ${art}>
                <div class="sided-90x mb-30 margin-l-r">
                    <div class="s-left"><img class="br-3 imgHeight90" src= ${img} alt=${name}></div>
@@ -19,6 +18,6 @@ function prodOne(result){
                    </div>
                </div>`;
 
-      outArr.innerHTML = str;
+    outArr.innerHTML = str;
   }
 }

@@ -1,14 +1,14 @@
-let keyformap = 'pk.eyJ1IjoibmFzdHlhZHJha29zaGEiLCJhIjoiY2thb2J0MDgwMGRibTJ4bnlqbnBqMjc0eCJ9._LIREwW4EyAU3LZEXid95Q';
+const keyformap = 'pk.eyJ1IjoibmFzdHlhZHJha29zaGEiLCJhIjoiY2thb2J0MDgwMGRibTJ4bnlqbnBqMjc0eCJ9._LIREwW4EyAU3LZEXid95Q';
 mapboxgl.accessToken = `${keyformap}`;
-let start = ['27.630283', '53.876483'];
-let map = new mapboxgl.Map({
+const start = ['27.630283', '53.876483'];
+const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v11',
   center: start,
   zoom: 10,
 });
 
-let marker = new mapboxgl.Marker()
+const marker = new mapboxgl.Marker()
   .setLngLat(['27.630283', '53.876483'])
   .addTo(map);
 

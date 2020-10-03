@@ -1,21 +1,20 @@
-function prodOneUpd(result){
-  if (result.length === 0) { document.getElementById('result').innerHTML = '<div id="str1" class = "black">Такого товара нет!</div>'; }
-  else{
+function prodOneUpd(result) {
+  if (result.length === 0) { document.getElementById('result').innerHTML = '<div id="str1" class = "black">Такого товара нет!</div>'; } else {
     const outArr = document.getElementById('product');
-    let str = ``;
-    let name = result[0].name;
-    let price = result[0].price;
-    let art = result[0].articul;
+    let str = '';
+    const { name } = result[0];
+    const { price } = result[0];
+    const art = result[0].articul;
     sessionStorage.art = art;
-    let descript = result[0].description;
-    let img = result[0].img;
-    var select = result[0].category;
-    let cal = result[0].cal;
-    let uglev = result[0].uglev;
-    let belok = result[0].belok;
-    let zhir = result[0].zhir;
+    const descript = result[0].description;
+    const { img } = result[0];
+    const select = result[0].category;
+    const { cal } = result[0];
+    const { uglev } = result[0];
+    const { belok } = result[0];
+    const { zhir } = result[0];
 
-            str
+    str
             += ` <form id="contact" action="" method="post" onsubmit="return false;" class = "formAdd">
                 <h3 class = "center-text">Добавление товара</h3>
                 <fieldset>
@@ -61,7 +60,7 @@ function prodOneUpd(result){
                 </fieldset>
               </form> `;
 
-      outArr.innerHTML = str;
-      addInformation(name, img, price, art, descript, select, cal, uglev, belok, zhir)
+    outArr.innerHTML = str;
+    addInformation(name, img, price, art, descript, select, cal, uglev, belok, zhir);
   }
 }

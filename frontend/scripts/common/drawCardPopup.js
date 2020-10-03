@@ -1,20 +1,20 @@
-function drawCardPopup(result){
-let outArr1 = document.getElementById('consequence');
-let str1 = ' ';
-for (let i = 0; i < 1; i++) {
-let articul = result[i].articul;
-let name = result[i].name;
-let price = result[i].price;
-let description = result[i].description;
-let cal = result[i].cal;
-let uglev = result[i].uglev;
-let belok = result[i].belok;
-let zhir = result[i].zhir;
-let img = result[i].img;
+function drawCardPopup(result) {
+  const outArr1 = document.getElementById('consequence');
+  let str1 = ' ';
+  for (let i = 0; i < 1; i += 1) {
+    const { articul } = result[i];
+    const { name } = result[i];
+    const { price } = result[i];
+    const { description } = result[i];
+    const { cal } = result[i];
+    const { uglev } = result[i];
+    const { belok } = result[i];
+    const { zhir } = result[i];
+    const { img } = result[i];
 
-
-if (result[i]!==undefined) str1 +=
-` <div>
+    if (result[i] !== undefined) {
+      str1
++= ` <div>
      <div class="center-text" id = ${articul}>
      <div class="colum1">
          <div class="mlr-auto img-150x pos-relative"><img class = "imgHeight150" src=${img} alt="${name}"></div>
@@ -35,9 +35,9 @@ if (result[i]!==undefined) str1 +=
      </div>
      <a class="close"></a>
   </div> `;
-
-}
-outArr1.innerHTML = str1;
+    }
+  }
+  outArr1.innerHTML = str1;
 }
 
 document.onclick = function clickCard(event) {

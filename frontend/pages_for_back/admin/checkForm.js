@@ -1,22 +1,22 @@
 function checkForm() {
-  let art = document.getElementById("articul");
-  let name = document.getElementById("name");
-  let descript = document.getElementById("descript");
-  let price = document.getElementById("price");
-  let img = document.getElementById("img");
-  var select = document.querySelector('select');
+  const art = document.getElementById('articul');
+  const name = document.getElementById('name');
+  const descript = document.getElementById('descript');
+  const price = document.getElementById('price');
+  const img = document.getElementById('img');
+  const select = document.querySelector('select');
   select.addEventListener('change', () => {
   });
-  let type = select.value;
-  let cal = document.getElementById("cal");
-  let uglev = document.getElementById("uglev");
-  let belok = document.getElementById("belok");
-  let zhir = document.getElementById("zhir");
+  const type = select.value;
+  const cal = document.getElementById('cal');
+  const uglev = document.getElementById('uglev');
+  const belok = document.getElementById('belok');
+  const zhir = document.getElementById('zhir');
   if (!art.checkValidity() || !name.checkValidity() || !descript.checkValidity() || !price.checkValidity() || !img.checkValidity() || !cal.checkValidity() || !uglev.checkValidity() || !belok.checkValidity() || !zhir.checkValidity()) {
-      console.log("error");
+    console.log('error');
   } else {
-    AddOne(art.value, name.value, descript.value, price.value, img.value, type, cal.value, uglev.value, belok.value, zhir.value)
-    document.getElementById("product").classList.add('hide');
-    document.getElementById("ok").classList.remove('hide');
+    AddOne(art.value, name.value, descript.value, price.value, img.value, type, cal.value, uglev.value, belok.value, zhir.value);
+    document.getElementById('product').classList.add('hide');
+    document.getElementById('ok').classList.remove('hide');
   }
 }

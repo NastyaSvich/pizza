@@ -1,7 +1,7 @@
-function showProduct(){
+function showProduct() {
   const outArr = document.getElementById('product');
-  let str = ``;
-          str
+  let str = '';
+  str
           += `
           <div id='container'>
             <div class='cell'><input type='search' id ="search" autocomplete="off" autofocus placeholder='Введите артикль товара'></div>
@@ -9,5 +9,5 @@ function showProduct(){
           </div>
           <div id = "result"></div>`;
 
-    outArr.innerHTML = str;
+  outArr.innerHTML = str;
 }

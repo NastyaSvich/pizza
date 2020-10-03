@@ -1,8 +1,8 @@
-(function resultForAll(){
-  let result = GetAll().then(result => pizzaAll(result))
-})();
+(function resultForAll() {
+  const result = GetAll().then((result) => pizzaAll(result));
+}());
 
-function pizzaPopup(event){
-  let articul = event.target.dataset.articul;
-  let result = GetOne(articul).then(result => drawCardPopup(result))
+function pizzaPopup(event) {
+  const { articul } = event.target.dataset;
+  const result = GetOne(articul).then((result) => drawCardPopup(result));
 }

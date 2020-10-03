@@ -3,16 +3,16 @@ window.onload = function allOrder() {
   let str = ' ';
   const reslt = localStorage.getItem('arrBasket');
   const countBasket = JSON.parse(reslt);
-  if (localStorage.arrBasket !== undefined && Number(localStorage.counter) !== 0){
+  if (localStorage.arrBasket !== undefined && Number(localStorage.counter) !== 0) {
     for (let i = 0; i < countBasket.name.length; i += 1) {
-      let name = countBasket.name[i];
-      let img = countBasket.img[i];
-      let price = countBasket.price[i];
-      let priceFirst = countBasket.priceFirst[i];
-      let count = countBasket.counts[i];
-        if (localStorage.counter !== undefined) {
-          str +=
-           `  <div class="col-md-6" id = "sect${i}">
+      const name = countBasket.name[i];
+      const img = countBasket.img[i];
+      const price = countBasket.price[i];
+      const priceFirst = countBasket.priceFirst[i];
+      const count = countBasket.counts[i];
+      if (localStorage.counter !== undefined) {
+        str
+           += `  <div class="col-md-6" id = "sect${i}">
               <div class="sided-90x mb-30 margin-l-r">
                   <div class="s-left"><img class="br-3 imgHeight90" src= ${img} alt=${name}></div>
                         <div class="s-right">
@@ -31,7 +31,7 @@ window.onload = function allOrder() {
                         <a class="del" onclick="delet(${i})"><img class = "delete" src = "images/del.svg" alt="del"></img></a>
                   </div>
               </div>`;
-        }
+      }
     }
     outArr.innerHTML = str;
     sumOrder();

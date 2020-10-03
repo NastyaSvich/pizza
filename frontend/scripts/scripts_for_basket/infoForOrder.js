@@ -1,28 +1,28 @@
-function infoForOrder(sum, count, i){
-  let arrBasket, name, img, price, priceFirst, btnCheck, counts;
+function infoForOrder(sum, count, i) {
+  let arrBasket;
 
   document.getElementById(`ord${i}`).innerHTML = sum;
   document.getElementById(`count${i}`).innerHTML = count;
-  let res = localStorage.getItem('arrBasket');
+  const res = localStorage.getItem('arrBasket');
   arrBasket = JSON.parse(res);
-  name = arrBasket.name;
-  img = arrBasket.img;
-  price = arrBasket.price;
-  priceFirst = arrBasket.priceFirst;
-  btnCheck = arrBasket.btnCheck;
-  counts = arrBasket.counts;
+  const { name } = arrBasket;
+  const { img } = arrBasket;
+  const { price } = arrBasket;
+  const { priceFirst } = arrBasket;
+  const { btnCheck } = arrBasket;
+  const { counts } = arrBasket;
 
   counts[i] = count;
   price[i] = sum;
 
   arrBasket = {
-    name: name,
-    price: price,
-    priceFirst: priceFirst,
-    img: img,
-    btnCheck: btnCheck,
-    counts: counts
-  }
+    name,
+    price,
+    priceFirst,
+    img,
+    btnCheck,
+    counts,
+  };
 
   localStorage.setItem('arrBasket', JSON.stringify(arrBasket));
 }
