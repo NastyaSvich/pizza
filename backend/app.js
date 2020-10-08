@@ -7,8 +7,8 @@ var express = require('express'),
   bodyParser = require('body-parser'),
   cors = require('cors');
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/onlineСafe', { useMongoClient: true });
+mongoose.Promise = global.Promise; 
+mongoose.connect('mongodb://Swooopi:swOOOpi6362@cluster0-shard-00-00.pqxdz.mongodb.net:27017,cluster0-shard-00-01.pqxdz.mongodb.net:27017,cluster0-shard-00-02.pqxdz.mongodb.net:27017/onlineСafe?ssl=true&replicaSet=atlas-txlopl-shard-0&authSource=admin&retryWrites=true&w=majority', { useMongoClient: true });
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
