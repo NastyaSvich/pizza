@@ -1,4 +1,4 @@
-window.onload = function allOrder() {
+function allOrder() {
   const outArr = document.getElementById('basket');
   let str = ' ';
   const reslt = localStorage.getItem('arrBasket');
@@ -37,3 +37,5 @@ window.onload = function allOrder() {
     sumOrder();
   } else { checkBasket(); }
 };
+
+window.onload = allOrder();
