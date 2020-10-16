@@ -1,5 +1,4 @@
 function pizzaAll(result) {
-  console.log(window.location);
   const outArr = document.getElementById('menu');
   let str = ' ';
   let count;
