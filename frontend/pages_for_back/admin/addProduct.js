@@ -9,10 +9,10 @@ function addProduct() {
               <input placeholder="Артикул" maxlength="30" id = "articul" type="text" tabindex="1" required autofocus>
             </fieldset>
             <fieldset>
-              <input placeholder="Название" maxlength="10" id = "name" type="text" tabindex="2" required>
+              <input placeholder="Название" maxlength="20" id = "name" type="text" tabindex="2" required>
             </fieldset>
             <fieldset>
-              <input placeholder="Описание" maxlength="50" id = "descript" type="text" tabindex="3" required>
+              <input placeholder="Описание" maxlength="100" id = "descript" type="text" tabindex="3" required>
             </fieldset>
             <fieldset>
               <input placeholder="Цена" maxlength="10" id = "price" type="number" tabindex="4" required>

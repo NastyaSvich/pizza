@@ -38,4 +38,5 @@ function checkBasket() {
   const tag = document.getElementById('basket');
   tag.style.display = 'block';
   tag.innerHTML = '<h5 class = "center-text"><b>Ваша корзина пуста :(</b></h5>';
+  document.getElementById('sumOrder').innerHTML = '0';
 }
