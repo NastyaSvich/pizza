@@ -7946,21 +7946,22 @@ border-bottom: 1px solid black;
   text-shadow: none;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 780px) {
   .table_blur {
       writing-mode: vertical-rl;
   }
 
   div#container {
     width: 100% !important;
+    margin: 0px auto !important;
+}
+
+  .bodyOperator {
+  overflow-x: overlay !important;
+  overflow-y: hidden !important;
 }
 }
 
-@media (max-width: 780px) {
-  div#container {
-      margin: 0px auto !important;
-  }
-}
 
 /* Admin */
 
