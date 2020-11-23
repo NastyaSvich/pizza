@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+        <title>¿Печь?</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/pizza.svg" />
+        <link href="plugin-frameworks/bootstrap.min.css" rel="stylesheet">
+        <link href="fonts/ionicons.css" rel="stylesheet">
+        <link href="style/styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+          <div class="container">
+                  <a class="logo" href="index.html"><img src="images/logo.png" alt="Logo"></a>
+
+                  <div class="right-area">
+                          <h6><a class="plr-20 color-white btn-fill-primary" href="tel:+375(29)236-63-62">Звоните: +375(29)236-63-62</a></h6>
+                  </div>
+
+                  <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+
+                  <ul class="main-menu font-mountainsre" id="main-menu">
+                          <li><a href="index.html">ГЛАВНАЯ</a></li>
+                          <li><a href="02_menu.html">МЕНЮ</a></li>
+                          <li><a href="03_contacts.html">КОНТАКТЫ</a></li>
+                          <li><a href="basket.html" class = "demo active">КОРЗИНА
+                            <img class = "basket first" src="images/basket1.png" alt="basket"></img>
+                            <img class = "basket second" src="images/basket.png" alt="basket"></img>
+                            <sup><big id = "n"></big></sup></a></li>
+                  </ul>
+
+                  <div class="clearfix"></div>
+          </div>
+  </header>
+
+
+<section class="bg-4 h-500x main-slider pos-relative">
+        <div class="triangle-up pos-bottom"></div>
+        <div class="container h-100">
+                <div class="dplay-tbl">
+                        <div class="dplay-tbl-cell center-text color-white pt-90">
+                                <h5><b>ЛУЧШЕЕ КАФЕ В МИНСКЕ</b></h5>
+                                <h2 class="mt-30 mb-15">Ваша корзина покупок</h2>
+                        </div>
+                </div>
+        </div>
+</section>
+
+<section class="bg-lite-blue">
+        <div class="container">
+                <div class="row" id = "basket"> </div>
+        </div>
+</section>
+
+<div class="grey-line"></div>
+
+<section class="counter-section section center-text sect1 bg-lite-blue">
+
+<div class="mt-sm-30 mb-50 mt-40 mb-sm-30 center-text"> <h2>Сумма заказа: <span id = "sumOrder" class = "red">0</span> <span class = "red">руб.</span></h2></div>
+<h6 class="center-text mt-40 mt-sm-30 mb-20"><a class="btn-brdr-primary plr-25 btnOrder bold disable colorBnt" id = "openWindow">Оформить заказ</a></h6>
+
+</section>
+
+<footer class="pb-50  pt-70 pos-relative">
+        <div class="pos-top triangle-bottom"></div>
+        <div class="container-fluid">
+                <a href="index.html"><img src="images/logo.png" class="logo-footer" alt="Logo"></a>
+
+                <div class="pt-30">
+                        <p class="underline-secondary"><b>Адрес:</b></p>
+                        <p>г.Минск, улица Жилуновича 4</p>
+                </div>
+
+                <div class="pt-30">
+                        <p class="underline-secondary mb-10"><b>Телефон:</b></p>
+                        <a href="tel:+375(29)236-63-62">+375(29)236-63-62</a>
+                </div>
+
+                <div class="pt-30">
+                        <p class="underline-secondary mb-10"><b>Email:</b></p>
+                        <a href="mailto:nastya_drakosha@bk.ru">nastya_drakosha@bk.ru</a>
+                </div>
+
+                <ul class="icon mt-30">
+                        <li><a href="https://www.facebook.com/profile.php?id=100006661696600"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/belteanews?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/marmeladka_top3"><i class="ion-social-instagram"></i></a></li>
+                        <li><a href="https://github.com/NastyaSvich"><i class="ion-social-github"></i></a></li>
+                </ul>
+
+                <p class="color-light font-9 mt-50 mt-sm-30">Copyright &copy;2020. All rights reserved | This site is made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://vk.com/svich_anastasia" target="_blank">Nastya Svich</a></p>
+        </div>
+
+        <div class="b-popup hide" id = "orderForm">
+            <div class="b-popup-content" id="consequence">
+                <form id="contact" action="" method="post" onsubmit="return false;">
+                  <h3>Оформление заказа</h3>
+                  <h4>Мы работаем с 9 до 24, после отправки формы Вам позвонит наш оператор!</h4>
+                  <fieldset>
+                    <input placeholder="Ваше имя" maxlength="15" id = "name" type="text" pattern="[A-Za-zА-Яа-яЁё\s]+$" tabindex="1" required autofocus>
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Ваша фамилия" maxlength="15" id = "surname" type="text" pattern="[A-Za-zА-Яа-яЁё\s]+$" tabindex="2" required>
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Ваш номер телефона" maxlength="12" id = "tel" title="&quot;Пример: +375292366362&quot;" type="number" tabindex="3" required>
+                  </fieldset>
+                  <fieldset>
+                    <h4>Выберите вид доставки! <a href = "03_contacts.html" class = "red" target="_blank">Подробнее о доставке...</a></h4>
+                      <div class="form_radio_btn">
+	                       <input id="radio-1" type="radio" name="radio" value="Самовывоз" checked required>
+	                       <label for="radio-1">Самовывоз</label>
+                      </div>
+
+                      <div class="form_radio_btn">
+	                       <input id="radio-2" type="radio" name="radio" value="Курьер">
+	                       <label for="radio-2">Курьером</label>
+                      </div>
+
+                      <div class="form_radio_btn">
+	                       <input id="radio-3" type="radio" name="radio" value="Бесконтактная">
+	                       <label for="radio-3">Бесконтактная</label>
+                      </div>
+                  </fieldset>
+                  <fieldset>
+                    <button name="submit" type="submit" id="submit" data-submit="...Sending">Оформить</button>
+                  </fieldset>
+                </form>
+            <a class="close"></a>
+        </div>
+        </div>
+
+        <div class="b-popup hide" id="ok">
+            <div class="b-popup-content" id="consequence">
+              <h3 class = "mrg-revert"> Ваш заказ отправлен, ожидайте звонка!</h3>
+                <br>
+                <h6><a class="btn-brdr-primary plr-25 basketBtn bold" onclick="location.reload();">ОК</a></h6>
+        </div>
+        </div>
+
+</footer>
+
+<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
+<script src="plugin-frameworks/bootstrap.min.js"></script>
+<script src="plugin-frameworks/swiper.js"></script>
+<script src="scripts/requests.js"></script>
+<script src="scripts/common/countBasket.js"></script>
+<script src="scripts/common/menu.js"></script>
+<script src="scripts/common/check.js"></script>
+<script src="scripts/scripts_for_basket/clickOrder.js"></script>
+<script src="scripts/scripts_for_basket/infoForOrder.js"></script>
+<script src="scripts/scripts_for_basket/sumOrder.js"></script>
+<script src="scripts/scripts_for_basket/delete.js"></script>
+<script src="scripts/scripts_for_basket/parse.js"></script>
+<script src="scripts/scripts_for_basket/form.js"></script>
+<script src="scripts/scripts_for_basket/allOrder.js"></script>
+</body>
+</html>
