@@ -18,7 +18,8 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "cors": "^2.8.5",
-    "express": "^4.15.4",
-    "mongoose": "^4.11.6"
+    "express": "^4.17.1",
+    "httpolyglot": "^0.1.2",
+    "mongoose": "^5.10.15"
   }
 }
